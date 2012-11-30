@@ -10,7 +10,7 @@
 	Usage: $('#content').redactor();
 */
 
-var rwindow, rdocument;
+var rwindow, rdocument, jQuery = django.jQuery;
 
 if (typeof RELANG === 'undefined')
 {
