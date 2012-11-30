@@ -148,6 +148,7 @@ INSTALLED_APPS = (
     'compressor',
     'typogrify',
     # Project-specific apps
+    'test_project.blog',
     'test_project.redactor',
 )
 
