@@ -148,6 +148,7 @@ INSTALLED_APPS = (
     'compressor',
     'typogrify',
     # Project-specific apps
+    'test_project.redactor',
 )
 
 MARKITUP_SET = 'plugins/markitup/sets/clientproof'
