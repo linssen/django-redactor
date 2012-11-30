@@ -14,4 +14,4 @@ class RedactorWidget(forms.Textarea):
 
     class Media:
         css = {"screen": ("django-redactor/redactor/redactor.css",)}
-        js = ("django-redactor/redactor/redactor.js", "django-redactor/js/setup.js",)
+        js = ("django-redactor/redactor/redactor.min.js", "django-redactor/js/setup.js",)
