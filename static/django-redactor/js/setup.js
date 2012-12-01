@@ -1,3 +1,13 @@
 django.jQuery(document).ready(function() {
-    django.jQuery(".redactor").redactor();
+    var settings = {
+        imageUpload: '/redactor/upload/',
+        imageUploadErrorCallback: callback
+    }
+    django.jQuery(".redactor").redactor(settings);
+
+    function callback(obj, json)
+    {
+        alert(json.error);
+        alert(json.anothermessage);	
+    }
 });

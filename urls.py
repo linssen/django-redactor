@@ -6,7 +6,7 @@ admin.autodiscover()
 
 # Root patterns
 urlpatterns = patterns('',
-
+    url(r'^redactor/upload/$', 'redactor.views.upload', name='redactor-upload'),
 )
 
 urlpatterns += patterns('',
