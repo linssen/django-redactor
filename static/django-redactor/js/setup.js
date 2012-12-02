@@ -1,7 +1,8 @@
 django.jQuery(document).ready(function() {
     var settings = {
         imageUpload: '/redactor/upload/',
-        imageUploadErrorCallback: callback
+        imageUploadErrorCallback: callback,
+        imageGetJson: '/redactor/images/'
     }
     django.jQuery(".redactor").redactor(settings);
 

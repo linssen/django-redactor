@@ -4,6 +4,7 @@ from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from django.conf import settings
 import json
+import os
 
 
 @csrf_exempt
@@ -23,3 +24,24 @@ def upload(request):
     response = {"error": "Just an error"}
     return HttpResponse(json.dumps(images), mimetype='application/json')
 
+@login_required
+def images(request):
+    images = []
+    allowed_exts = ['.png', '.jpg', '.jpeg', '.gif']
+
+    for root, sub_folders, files in os.walk('media'):
+        for file in files:
+            f = os.path.join(root, file)
+            image = '/%s' % f
+
+            if os.path.splitext(f)[1] not in allowed_exts:
+                continue
+
+            images.append({
+                'thumb': image,
+                'image': image,
+                'title': file,
+                'folder': os.path.split(f)[-2]
+            })
+
+    return HttpResponse(json.dumps(images), mimetype='application/json')
