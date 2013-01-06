@@ -1,4 +1,4 @@
-# Django settings for test_project project.
+# Django settings for redactor_test project.
 import os
 from django.conf.global_settings import *
 
@@ -18,7 +18,7 @@ MANAGERS = ADMINS
 
 SECRET_KEY = ',]2aKKW6>=OXOE.ND}3Cgc{n*Z#.^/uS6Z7Brs~:b^JQ<#H>Eg'
 
-ROOT_URLCONF = 'test_project.urls'
+ROOT_URLCONF = 'redactor_test.urls'
 
 CURDIR = os.path.dirname(__file__)
 
@@ -71,7 +71,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
     'django.contrib.messages.context_processors.messages',
     'django.core.context_processors.static',
-    'test_project.context_processors.site',
+    'redactor_test.context_processors.site',
 )
 
 TEMPLATE_DIRS = (
@@ -148,8 +148,8 @@ INSTALLED_APPS = (
     'compressor',
     'typogrify',
     # Project-specific apps
-    'test_project.blog',
-    'test_project.redactor',
+    'redactor_test.blog',
+    'redactor_test.redactor',
 )
 
 MARKITUP_SET = 'plugins/markitup/sets/clientproof'

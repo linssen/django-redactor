@@ -11,4 +11,4 @@ local_settings.py
 media/*
 static_collected/*
 
-test_project.db
+redactor_test.db
